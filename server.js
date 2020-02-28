@@ -1,6 +1,6 @@
 const express = require("express");
 const mysql = require("mysql");
-const io = require("socket.io")(4000);
+const io = require("socket.io")(80);
 
 
 const db = mysql.createConnection({
