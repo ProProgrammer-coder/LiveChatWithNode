@@ -4,10 +4,10 @@ const io = require("socket.io")(4000);
 
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "projects"
+    host: "	rdbms.strato.de",
+    user: "U3727967",
+    password: "Unsere_erste_Homepage!",
+    database: "DB3727967"
 });
 
 db.connect((err) => {
