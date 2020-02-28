@@ -1,6 +1,6 @@
 const express = require("express");
 const mysql = require("mysql");
-const io = require("socket.io")(80);
+const io = require("socket.io")(4000);
 
 
 const db = mysql.createConnection({
@@ -73,11 +73,10 @@ io.on('connection', socket => {
 
 
 
-app.get("/:id", (req, res) => {
-    let sql = `SELECT name,pw FROM members WHERE userid = '${req.params.id}'`;
-    db.query(sql, (err, result) => {
-        if (err) throw err;
-        console.log(result);
-        res.send("Got info....");
-    })
+app.get("/", (req, res) => {
+   res.send("Hello World");  
+});
+
+app.listen("3000",()=>{
+    
 });
